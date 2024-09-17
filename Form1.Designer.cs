@@ -28,55 +28,91 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
+            startButton = new Button();
+            stopButton = new Button();
             richTextBox1 = new RichTextBox();
+            richTextBox2 = new RichTextBox();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // startButton
             // 
-            button1.Location = new Point(45, 54);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 94);
-            button1.TabIndex = 1;
-            button1.Text = "start";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            startButton.Location = new Point(45, 54);
+            startButton.Name = "startButton";
+            startButton.Size = new Size(100, 94);
+            startButton.TabIndex = 1;
+            startButton.Text = "start";
+            startButton.UseVisualStyleBackColor = true;
+            startButton.Click += startButton_Click;
             // 
-            // button2
+            // stopButton
             // 
-            button2.Location = new Point(45, 270);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 94);
-            button2.TabIndex = 2;
-            button2.Text = "stop";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            stopButton.Location = new Point(45, 270);
+            stopButton.Name = "stopButton";
+            stopButton.Size = new Size(100, 94);
+            stopButton.TabIndex = 2;
+            stopButton.Text = "stop";
+            stopButton.UseVisualStyleBackColor = true;
+            stopButton.Click += stopButton_Click;
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(173, 54);
+            richTextBox1.Location = new Point(173, 78);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(557, 310);
+            richTextBox1.Size = new Size(391, 286);
             richTextBox1.TabIndex = 3;
             richTextBox1.Text = "";
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.Location = new Point(570, 78);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(189, 286);
+            richTextBox2.TabIndex = 4;
+            richTextBox2.Text = "";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(173, 60);
+            label1.Name = "label1";
+            label1.Size = new Size(69, 15);
+            label1.TabIndex = 5;
+            label1.Text = "PingDisplay";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(570, 60);
+            label2.Name = "label2";
+            label2.Size = new Size(74, 15);
+            label2.TabIndex = 6;
+            label2.Text = "AveragePing";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(richTextBox2);
             Controls.Add(richTextBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(stopButton);
+            Controls.Add(startButton);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private Button button1;
-        private Button button2;
+        private Button startButton;
+        private Button stopButton;
         private RichTextBox richTextBox1;
+        private RichTextBox richTextBox2;
+        private Label label1;
+        private Label label2;
     }
 }
