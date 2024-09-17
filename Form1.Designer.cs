@@ -63,13 +63,14 @@
             richTextBox1.Size = new Size(391, 286);
             richTextBox1.TabIndex = 3;
             richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // richTextBox2
             // 
             richTextBox2.Location = new Point(570, 78);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.Size = new Size(189, 286);
-            richTextBox2.TabIndex = 4;
+            richTextBox2.TabIndex = 3;
             richTextBox2.Text = "";
             // 
             // label1
@@ -77,18 +78,18 @@
             label1.AutoSize = true;
             label1.Location = new Point(173, 60);
             label1.Name = "label1";
-            label1.Size = new Size(69, 15);
+            label1.Size = new Size(67, 15);
             label1.TabIndex = 5;
-            label1.Text = "PingDisplay";
+            label1.Text = "RTT Display";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(570, 60);
             label2.Name = "label2";
-            label2.Size = new Size(74, 15);
+            label2.Size = new Size(72, 15);
             label2.TabIndex = 6;
-            label2.Text = "AveragePing";
+            label2.Text = "Average RTT";
             // 
             // Form1
             // 
