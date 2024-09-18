@@ -29,7 +29,7 @@ namespace PingTracker
             stopButton.Enabled = true;
 
             double count = 0;
-            string endPoint = ConfigurationManager.AppSettings[comboBox1.SelectedIndex.ToString()];
+            string endPoint = ConfigurationManager.AppSettings[(comboBox1.SelectedIndex + 1).ToString()];
 
             // Ping操作を別スレッドで非同期実行
             await Task.Run(async () =>
@@ -93,12 +93,11 @@ namespace PingTracker
                     {
                         richTextBox3.Focus();
                         HighestPingStrBld.AppendLine($"HighestRTT: {pingList.Max().ToString()} ms");
-                        richTextBox3.AppendText(HighestPingStrBld.ToString());
+                        richTextBox3.Text = HighestPingStrBld.ToString();
                         richTextBox4.Focus();
                         LowestStrBld.AppendLine($"LowestRTT: {pingList.Min().ToString()} ms");
-                        richTextBox4.AppendText(LowestStrBld.ToString());
+                        richTextBox4.Text = LowestStrBld.ToString();
                     }));
-                    pingList.RemoveAt(0);
                 }
             }
             else
@@ -112,14 +111,5 @@ namespace PingTracker
             avePingStr = avePingStrBld.ToString();
             return (pingStr, avePingStr);
         }
-        private void AppendTextToRichTextBox(RichTextBox richTextBox, string text)
-        {
-            // テキストを追加
-            richTextBox.AppendText(text);
-
-            // カーソルを最新の位置に設定し、スクロール
-            richTextBox.ScrollToCaret();
-        }
-
     }
 }
