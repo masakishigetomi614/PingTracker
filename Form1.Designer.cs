@@ -40,6 +40,7 @@
             label4 = new Label();
             richTextBox4 = new RichTextBox();
             label5 = new Label();
+            button1 = new Button();
             SuspendLayout();
             // 
             // startButton
@@ -118,7 +119,7 @@
             // 
             richTextBox3.Location = new Point(540, 105);
             richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(189, 119);
+            richTextBox3.Size = new Size(189, 48);
             richTextBox3.TabIndex = 9;
             richTextBox3.Text = "";
             // 
@@ -133,20 +134,30 @@
             // 
             // richTextBox4
             // 
-            richTextBox4.Location = new Point(540, 272);
+            richTextBox4.Location = new Point(540, 174);
             richTextBox4.Name = "richTextBox4";
-            richTextBox4.Size = new Size(189, 119);
+            richTextBox4.Size = new Size(189, 48);
             richTextBox4.TabIndex = 11;
             richTextBox4.Text = "";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(540, 254);
+            label5.Location = new Point(540, 156);
             label5.Name = "label5";
             label5.Size = new Size(66, 15);
             label5.TabIndex = 12;
             label5.Text = "Lowest RTT";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(540, 34);
+            button1.Name = "button1";
+            button1.Size = new Size(100, 41);
+            button1.TabIndex = 13;
+            button1.Text = "reset";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // Form1
             // 
@@ -154,6 +165,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(richTextBox4);
             Controls.Add(label4);
@@ -185,5 +197,6 @@
         private Label label4;
         private RichTextBox richTextBox4;
         private Label label5;
+        private Button button1;
     }
 }

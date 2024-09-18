@@ -61,6 +61,7 @@ namespace PingTracker
             startButton.Enabled = true;
             // stopÉ{É^ÉìîÒäàê´âª
             stopButton.Enabled = false;
+            sumPing = 0;
         }
 
         private (string, string) GetPingValue(double count, string endPoint)
@@ -110,6 +111,14 @@ namespace PingTracker
             pingStr = pingStrBld.ToString();
             avePingStr = avePingStrBld.ToString();
             return (pingStr, avePingStr);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = string.Empty;
+            richTextBox2.Text = string.Empty;
+            richTextBox3.Text = string.Empty;
+            richTextBox4.Text = string.Empty;
         }
     }
 }
